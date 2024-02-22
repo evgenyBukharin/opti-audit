@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta name="theme-color" content="#111111" />
+		<title>Opti-audit</title>
+		<link rel="stylesheet" href="css/vendor.css" />
+		<link rel="stylesheet" href="css/main.css" />
+		<script defer src="js/main.js"></script>
+	</head>
+
+	<body class="page__body">
+		<div class="site-container">
+			<main class="main">
+				<section class="audit">
+					<div class="container audit__container">
+						<div class="audit__body">
+							<div class="audit__row">
+								<div class="audit__cell audit__cell-title">Адрес портала</div>
+								<div class="audit__cell audit__cell-field audit__cell-8">
+									<input class="audit__input" type="text" id="address" placeholder="Введите адрес" />
+								</div>
+							</div>
+							<div class="audit__row">
+								<div class="audit__cell audit__cell-title">Тариф портала</div>
+								<div class="audit__cell audit__cell-field audit__cell-8">
+									<input class="audit__input" type="text" id="tarif" placeholder="Тариф портала" />
+								</div>
+							</div>
+							<div class="audit__row">
+								<div class="audit__cell audit__cell-title">Дата продления тарифа</div>
+								<div class="audit__cell audit__cell-field audit__cell-4">
+									<input class="audit__input" type="date" id="tarifRenewDate" />
+								</div>
+							</div>
+							<div class="audit__row">
+								<div class="audit__cell audit__cell-title">Пульс портала</div>
+								<div class="audit__cell audit__cell-field audit__cell-8">
+									<label class="audit__label audit__label-file" for="pulse">
+										<input class="audit__input audit__input-file" type="file" id="pulse" multiple />
+										<span class="audit__text">Выберите файлы</span>
+									</label>
+								</div>
+							</div>
+							<div class="audit__row">
+								<div class="audit__cell audit__cell-title">Количество сотрудников</div>
+								<div class="audit__cell audit__cell-field audit__cell-4">
+									<input
+										class="audit__input audit__input-number"
+										type="number"
+										id="employeeCount"
+										placeholder="Введите количество"
+									/>
+								</div>
+							</div>
+							<div class="audit__row">
+								<div class="audit__cell audit__cell-title">Количество администраторов</div>
+								<div class="audit__cell audit__cell-field audit__cell-4">
+									<input
+										class="audit__input audit__input-number"
+										type="number"
+										id="adminCount"
+										placeholder="Введите количество"
+									/>
+								</div>
+							</div>
+							<div class="audit__row">
+								<div class="audit__cell audit__cell-title">Почты администраторов</div>
+								<div class="audit__cell audit__cell-field audit__cell-12">
+									<textarea class="audit__textarea audit__textarea-2" id="adminsEmails">
+Вводить адреса через пробел, пример ниже (удалить весь текст из поля перед вводом):
+admin.email1@gmail.com admin.email2@gmail.com admin.email3@gmail.com
+					</textarea
+									>
+								</div>
+							</div>
+							<div class="audit__row">
+								<div class="audit__cell audit__cell-title">Реквизиты компании</div>
+								<div class="audit__cell audit__cell-field audit__cell-8">
+									<label class="audit__label audit__label-file" for="requisites">
+										<input
+											class="audit__input audit__input-file"
+											type="file"
+											id="requisites"
+											multiple
+										/>
+										<span class="audit__text">Выберите файлы</span>
+									</label>
+								</div>
+							</div>
+							<div class="audit__row">
+								<div class="audit__cell audit__cell-title">Наличие подписки на маркет</div>
+								<div class="audit__cell audit__cell-field audit__cell-field-radio audit__cell-3">
+									<label class="audit__label audit__label-radio" for="marketSub1">
+										<input
+											class="audit__input"
+											value="Да"
+											type="radio"
+											name="marketSub"
+											id="marketSub1"
+										/>
+										<span class="audit__text">Да</span>
+									</label>
+									<label class="audit__label audit__label-radio" for="marketSub2">
+										<input
+											class="audit__input"
+											value="Нет"
+											type="radio"
+											name="marketSub"
+											id="marketSub2"
+										/>
+										<span class="audit__text">Нет</span>
+									</label>
+								</div>
+							</div>
+							<div class="audit__row">
+								<div class="audit__cell audit__cell-title">Дата действия подписки на маркет</div>
+								<div class="audit__cell audit__cell-field audit__cell-4">
+									<input
+										class="audit__input audit__input-before"
+										type="date"
+										id="subEndDate"
+										data-before="до"
+									/>
+								</div>
+							</div>
+							<div class="audit__row">
+								<div class="audit__cell audit__cell-title">SIP-конектор</div>
+								<div class="audit__cell audit__cell-field audit__cell-field-radio audit__cell-3">
+									<label class="audit__label audit__label-radio" for="sipconnector1">
+										<input
+											class="audit__input"
+											value="Да"
+											type="radio"
+											name="sipconnector"
+											id="sipconnector1"
+										/>
+										<span class="audit__text">Да</span>
+									</label>
+									<label class="audit__label audit__label-radio" for="sipconnector2">
+										<input
+											class="audit__input"
+											value="Нет"
+											type="radio"
+											name="sipconnector"
+											id="sipconnector2"
+										/>
+										<span class="audit__text">Нет</span>
+									</label>
+								</div>
+							</div>
+							<div class="audit__row">
+								<div class="audit__cell audit__cell-title">
+									Если есть SIP-конектор, то до какого числа оплачен
+								</div>
+								<div class="audit__cell audit__cell-field audit__cell-4">
+									<input
+										class="audit__input audit__input-before"
+										type="date"
+										id="sipConnectorEndDate"
+										data-before="до"
+									/>
+								</div>
+							</div>
+							<div class="audit__row">
+								<div class="audit__cell audit__cell-title">Телефония</div>
+								<div class="audit__cell audit__cell-field audit__cell-field-radio audit__cell-3">
+									<label class="audit__label audit__label-radio" for="telefony1">
+										<input
+											class="audit__input"
+											value="Да"
+											type="radio"
+											name="telefony"
+											id="telefony1"
+										/>
+										<span class="audit__text">Да</span>
+									</label>
+									<label class="audit__label audit__label-radio" for="telefony2">
+										<input
+											class="audit__input"
+											value="Нет"
+											type="radio"
+											name="telefony"
+											id="telefony2"
+										/>
+										<span class="audit__text">Нет</span>
+									</label>
+								</div>
+							</div>
+							<div class="audit__row">
+								<div class="audit__cell audit__cell-title">Права доступа телефонии</div>
+								<div class="audit__cell audit__cell-field audit__cell-8">
+									<label class="audit__label audit__label-file" for="telefonyAccesses">
+										<input
+											class="audit__input audit__input-file"
+											type="file"
+											id="telefonyAccesses"
+											multiple
+										/>
+										<span class="audit__text">Выберите файлы</span>
+									</label>
+								</div>
+							</div>
+							<div class="audit__row">
+								<div class="audit__cell audit__cell-title">Есть ли бизнес-процессы</div>
+								<div class="audit__cell audit__cell-field audit__cell-field-radio audit__cell-3">
+									<label class="audit__label audit__label-radio" for="buzinessprocesses1">
+										<input
+											class="audit__input"
+											value="Да"
+											type="radio"
+											name="buzinessprocesses"
+											id="buzinessprocesses1"
+										/>
+										<span class="audit__text">Да</span>
+									</label>
+									<label class="audit__label audit__label-radio" for="telefony2">
+										<input
+											class="audit__input"
+											value="Нет"
+											type="radio"
+											name="buzinessprocesses"
+											id="buzinessprocesses2"
+										/>
+										<span class="audit__text">Нет</span>
+									</label>
+								</div>
+							</div>
+							<div class="audit__row">
+								<div class="audit__cell audit__cell-title">Если есть бизнес-процессы описание</div>
+								<div class="audit__cell audit__cell-field audit__cell-12">
+									<textarea class="audit__textarea audit__textarea-4" id="buzinessprocessesDescr">
+									</textarea>
+								</div>
+								<div class="audit__cell audit__cell-field audit__cell-field-file audit__cell-5">
+									<label class="audit__label audit__label-file" for="buzinessprocessesFiles">
+										<input
+											class="audit__input audit__input-file"
+											type="file"
+											id="buzinessprocessesFiles"
+											multiple
+										/>
+										<span class="audit__text">Выберите файлы</span>
+									</label>
+								</div>
+							</div>
+							<div class="audit__row">
+								<div class="audit__cell audit__cell-title">Есть ли смарт-процессы</div>
+								<div class="audit__cell audit__cell-field audit__cell-field-radio audit__cell-3">
+									<label class="audit__label audit__label-radio" for="smartsprocesses1">
+										<input
+											class="audit__input"
+											value="Да"
+											type="radio"
+											name="smartsprocesses"
+											id="smartsprocesses1"
+										/>
+										<span class="audit__text">Да</span>
+									</label>
+									<label class="audit__label audit__label-radio" for="smartsprocesses2">
+										<input
+											class="audit__input"
+											value="Нет"
+											type="radio"
+											name="smartsprocesses"
+											id="smartsprocesses2"
+										/>
+										<span class="audit__text">Нет</span>
+									</label>
+								</div>
+							</div>
+							<div class="audit__row">
+								<div class="audit__cell audit__cell-title">Если есть смарт-процессы описание</div>
+								<div class="audit__cell audit__cell-field audit__cell-12">
+									<textarea class="audit__textarea audit__textarea-4" id="smartprocessesDescr">
+									</textarea>
+								</div>
+								<div class="audit__cell audit__cell-field audit__cell-field-file audit__cell-5">
+									<label class="audit__label audit__label-file" for="smartprocessesFiles">
+										<input
+											class="audit__input audit__input-file"
+											type="file"
+											id="smartprocessesFiles"
+											multiple
+										/>
+										<span class="audit__text">Выберите файлы</span>
+									</label>
+								</div>
+							</div>
+							<div class="audit__row">
+								<div class="audit__cell audit__cell-title">Бизнес-процессы живой ленты</div>
+								<div class="audit__cell audit__cell-field audit__cell-16">
+									<input
+										class="audit__input"
+										type="text"
+										id="liveLine"
+										placeholder="Бизнес-процессы живой ленты"
+									/>
+								</div>
+							</div>
+							<div class="audit__row">
+								<div class="audit__cell audit__cell-title">Количество установленных приложений</div>
+								<div class="audit__cell audit__cell-field audit__cell-5">
+									<input
+										class="audit__input audit__input-number"
+										type="number"
+										id="appsInstalled"
+										placeholder="Количетсво приложений"
+									/>
+								</div>
+							</div>
+							<div class="audit__row">
+								<div class="audit__cell audit__cell-title">Какие приложения установлены</div>
+								<div class="audit__cell audit__cell-field audit__cell-12">
+									<textarea
+										class="audit__textarea audit__textarea-3"
+										id="whatAppsInstalled"
+									></textarea>
+								</div>
+							</div>
+							<div class="audit__row">
+								<div class="audit__cell audit__cell-title">Воронка лидов</div>
+								<div class="audit__cell audit__cell-field audit__cell-8">
+									<label class="audit__label audit__label-file" for="leadsHopper">
+										<input
+											class="audit__input audit__input-file"
+											type="file"
+											id="leadsHopper"
+											multiple
+										/>
+										<span class="audit__text">Выберите файлы</span>
+									</label>
+								</div>
+							</div>
+							<div class="audit__row">
+								<div class="audit__cell audit__cell-title">Роботы лидов</div>
+								<div class="audit__cell audit__cell-field audit__cell-12">
+									<textarea class="audit__textarea audit__textarea-4" id="leadsRobots"> </textarea>
+								</div>
+								<div class="audit__cell audit__cell-field audit__cell-field-file audit__cell-5">
+									<label class="audit__label audit__label-file" for="leadsRobotsFiles">
+										<input
+											class="audit__input audit__input-file"
+											type="file"
+											id="leadsRobotsFiles"
+											multiple
+										/>
+										<span class="audit__text">Выберите файлы</span>
+									</label>
+								</div>
+							</div>
+							<div class="audit__row">
+								<div class="audit__cell audit__cell-title">Воронка сделок</div>
+								<div class="audit__cell audit__cell-field audit__cell-8">
+									<label class="audit__label audit__label-file" for="dealsHopper">
+										<input
+											class="audit__input audit__input-file"
+											type="file"
+											id="dealsHopper"
+											multiple
+										/>
+										<span class="audit__text">Выберите файлы</span>
+									</label>
+								</div>
+							</div>
+							<div class="audit__row">
+								<div class="audit__cell audit__cell-title">Роботы сделок</div>
+								<div class="audit__cell audit__cell-field audit__cell-12">
+									<textarea class="audit__textarea audit__textarea-4" id="dealsRobots"> </textarea>
+								</div>
+								<div class="audit__cell audit__cell-field audit__cell-field-file audit__cell-5">
+									<label class="audit__label audit__label-file" for="dealsRobotsFiles">
+										<input
+											class="audit__input audit__input-file"
+											type="file"
+											id="dealsRobotsFiles"
+											multiple
+										/>
+										<span class="audit__text">Выберите файлы</span>
+									</label>
+								</div>
+							</div>
+							<div class="audit__row">
+								<div class="audit__cell audit__cell-title">Права доступа в CRM</div>
+								<div class="audit__cell audit__cell-field audit__cell-8">
+									<label class="audit__label audit__label-file" for="crmAccesses">
+										<input
+											class="audit__input audit__input-file"
+											type="file"
+											id="crmAccesses"
+											multiple
+										/>
+										<span class="audit__text">Выберите файлы</span>
+									</label>
+								</div>
+							</div>
+							<div class="audit__row">
+								<div class="audit__cell audit__cell-title">CRM-документы</div>
+								<div class="audit__cell audit__cell-field audit__cell-8">
+									<label class="audit__label audit__label-file" for="crmDocs">
+										<input
+											class="audit__input audit__input-file"
+											type="file"
+											id="crmDocs"
+											multiple
+										/>
+										<span class="audit__text">Выберите файлы</span>
+									</label>
+								</div>
+							</div>
+							<div class="audit__row">
+								<div class="audit__cell audit__cell-title">Дополнительные поля сущностей</div>
+								<div class="audit__cell audit__cell-field audit__cell-8">
+									<label class="audit__label audit__label-file" for="entityExtraFields">
+										<input
+											class="audit__input audit__input-file"
+											type="file"
+											id="entityExtraFields"
+											multiple
+										/>
+										<span class="audit__text">Выберите файлы</span>
+									</label>
+								</div>
+							</div>
+							<div class="audit__row">
+								<div class="audit__cell audit__cell-title">Источники</div>
+								<div class="audit__cell audit__cell-field audit__cell-8">
+									<label class="audit__label audit__label-file" for="sources">
+										<input
+											class="audit__input audit__input-file"
+											type="file"
+											id="sources"
+											multiple
+										/>
+										<span class="audit__text">Выберите файлы</span>
+									</label>
+								</div>
+							</div>
+							<div class="audit__row">
+								<div class="audit__cell audit__cell-title">Контакт-центр</div>
+								<div class="audit__cell audit__cell-field audit__cell-12">
+									<textarea class="audit__textarea audit__textarea-4" id="contactCenter"></textarea>
+								</div>
+								<div class="audit__cell audit__cell-field audit__cell-field-file audit__cell-5">
+									<label class="audit__label audit__label-file" for="contactCenterFiles">
+										<input
+											class="audit__input audit__input-file"
+											type="file"
+											id="contactCenterFiles"
+											multiple
+										/>
+										<span class="audit__text">Выберите файлы</span>
+									</label>
+								</div>
+							</div>
+							<div class="audit__row">
+								<div class="audit__cell audit__cell-title">Список открытых линий</div>
+								<div class="audit__cell audit__cell-field audit__cell-12">
+									<textarea class="audit__textarea audit__textarea-4" id="openLinesList"></textarea>
+								</div>
+							</div>
+							<div class="audit__row">
+								<div class="audit__cell audit__cell-title">Список CRM-форм</div>
+								<div class="audit__cell audit__cell-field audit__cell-8">
+									<label class="audit__label audit__label-file" for="crmForms">
+										<input
+											class="audit__input audit__input-file"
+											type="file"
+											id="crmForms"
+											multiple
+										/>
+										<span class="audit__text">Выберите файлы</span>
+									</label>
+								</div>
+							</div>
+							<div class="audit__row">
+								<div class="audit__cell audit__cell-title">База знаний</div>
+								<div class="audit__cell audit__cell-field audit__cell-8">
+									<label class="audit__label audit__label-file" for="knowledgeBase">
+										<input
+											class="audit__input audit__input-file"
+											type="file"
+											id="knowledgeBase"
+											multiple
+										/>
+										<span class="audit__text">Выберите файлы</span>
+									</label>
+								</div>
+							</div>
+							<div class="audit__row">
+								<div class="audit__cell audit__cell-title">Диск, место</div>
+								<div class="audit__cell audit__cell-field audit__cell-8">
+									<label class="audit__label audit__label-file" for="diskSpace">
+										<input
+											class="audit__input audit__input-file"
+											type="file"
+											id="diskSpace"
+											multiple
+										/>
+										<span class="audit__text">Выберите файлы</span>
+									</label>
+								</div>
+							</div>
+							<div class="audit__row">
+								<div class="audit__cell audit__cell-title">Рабочие группы</div>
+								<div class="audit__cell audit__cell-field audit__cell-8">
+									<label class="audit__label audit__label-file" for="workGroups">
+										<input
+											class="audit__input audit__input-file"
+											type="file"
+											id="workGroups"
+											multiple
+										/>
+										<span class="audit__text">Выберите файлы</span>
+									</label>
+								</div>
+							</div>
+							<div class="audit__row">
+								<div class="audit__cell audit__cell-title">Сайты и маркетинг</div>
+								<div class="audit__cell audit__cell-field audit__cell-8">
+									<label class="audit__label audit__label-file" for="sitesMarketing">
+										<input
+											class="audit__input audit__input-file"
+											type="file"
+											id="sitesMarketing"
+											multiple
+										/>
+										<span class="audit__text">Выберите файлы</span>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+		</div>
+	</body>
+</html>

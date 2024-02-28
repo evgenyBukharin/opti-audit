@@ -249,7 +249,7 @@ body {
 	width: 100%;
 	border: none;
 	outline: 0;
-	resize: none;
+	resize: vertical;
 	padding: 12px;
 	height: 48px;
 	font-size: 16px;

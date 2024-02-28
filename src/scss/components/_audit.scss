@@ -1,14 +1,30 @@
 .audit {
 	padding: 40px 0;
-	&__body {
+	&__title {
+		font-size: 36px;
+		line-height: 40px;
+		font-weight: 600;
+		margin-bottom: 20px;
+		color: #474766;
+	}
+	&__form {
 		display: flex;
 		flex-direction: column;
 		gap: 10px;
 	}
 	&__row {
+		position: relative;
 		display: grid;
 		grid-template-columns: repeat(24, 1fr);
-		gap: 10px;
+		column-gap: 10px;
+		&-hidden {
+			display: none;
+		}
+		&-copying {
+			& .audit__button-delete {
+				display: none;
+			}
+		}
 	}
 	&__cell {
 		font-size: 16px;
@@ -119,11 +135,12 @@
 		width: 100%;
 		border: none;
 		outline: none;
-		resize: none;
+		resize: vertical;
 		padding: 12px;
 		height: 48px;
 		font-size: 16px;
 		line-height: 18px;
+		min-height: 192px;
 		&-2 {
 			height: 96px;
 		}
@@ -132,6 +149,34 @@
 		}
 		&-4 {
 			height: 192px;
+		}
+	}
+	&__button {
+		border: 1px solid var(--border-color);
+		border-radius: 7px;
+		grid-column: 2 span;
+		height: fit-content;
+		min-height: 53px;
+		background: var(--white-color);
+		transition: color 0.3s ease, border 0.3s ease;
+		&:disabled {
+			border: 1px solid var(--grey-color);
+			color: var(--grey-color);
+			cursor: not-allowed;
+		}
+		&-delete {
+			display: inline-block;
+			grid-column: 23 / 25;
+			position: absolute;
+			top: 63px;
+			width: 107px;
+			right: 0;
+		}
+		&-save {
+			border: 1px solid var(--blue-color);
+			background: var(--blue-color);
+			color: var(--white-color);
+			grid-column: 3 span;
 		}
 	}
 }

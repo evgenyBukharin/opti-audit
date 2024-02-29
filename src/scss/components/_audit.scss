@@ -1,12 +1,6 @@
 .audit {
 	padding: 40px 0;
-	&__title {
-		font-size: 36px;
-		line-height: 40px;
-		font-weight: 600;
-		margin-bottom: 20px;
-		color: #474766;
-	}
+
 	&__form {
 		display: flex;
 		flex-direction: column;
@@ -48,6 +42,10 @@
 			}
 			&-file {
 				height: fit-content;
+			}
+			&-slider {
+				height: fit-content;
+				grid-column: 9 span;
 			}
 		}
 		&-3 {
@@ -149,6 +147,9 @@
 		}
 		&-4 {
 			height: 192px;
+		}
+		&-100 {
+			min-height: 100%;
 		}
 	}
 	&__button {

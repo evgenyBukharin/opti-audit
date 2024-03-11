@@ -1,7 +1,11 @@
 .audit {
-	padding: 40px 0;
-
+	padding: 10px 0;
 	&__form {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+	&__panel {
 		display: flex;
 		flex-direction: column;
 		gap: 10px;
@@ -179,5 +183,19 @@
 			color: var(--white-color);
 			grid-column: 3 span;
 		}
+		&-next {
+			grid-column: 6 / 9;
+			color: var(--border-color);
+			background: var(--white-color);
+			transition: color 0.3s ease, background 0.3s ease;
+			&:hover {
+				background: var(--border-color);
+				color: var(--white-color);
+			}
+		}
+	}
+	&__nav-btn {
+		opacity: 0.7;
+		pointer-events: none;
 	}
 }

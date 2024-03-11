@@ -3,7 +3,22 @@
 	@include('partials/head.html')
 	<body class="page__body">
 		<div class="site-container">
-			<main class="main">@include('partials/audit.html')</main>
+			<main class="main">
+				<div class="tabs root__tabs" data-tabs="root-tabs">
+					<ul class="tabs__nav root__nav list-reset">
+						<li class="root__item tabs__nav-item">
+							<button class="tabs__nav-btn root__btn" type="button">Создание аудита</button>
+						</li>
+						<li class="root__item tabs__nav-item">
+							<button class="tabs__nav-btn root__btn" type="button">Результаты</button>
+						</li>
+					</ul>
+					<div class="tabs__content root__content">
+						<div class="tabs__panel root__panel">@include('partials/audit.html')</div>
+						<div class="tabs__panel root__panel">@include('partials/result.html')</div>
+					</div>
+				</div>
+			</main>
 		</div>
 	</body>
 </html>

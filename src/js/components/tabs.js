@@ -78,22 +78,42 @@ export default class Tabs {
 	}
 }
 
-const auditTabs = new Tabs(
-	"audit-tabs",
-	{
-		list: "audit__nav",
-		button: "tabs__nav-btn",
-		panel: "tabs__panel",
-	},
-	0
-);
-const nextButtons = document.querySelectorAll(".audit__button-next");
-nextButtons.forEach((btn, idx) => {
-	btn.addEventListener("click", (e) => {
-		e.preventDefault();
-		auditTabs.switchTabs(document.querySelector(`#audit-tabs${idx + 2}`));
+// data-saving
+const auditSection = document.querySelector(".audit");
+let companyId = 14;
+const auditData = {
+	part1: [],
+	part2: [],
+	part3: [],
+};
+let auditDataKeys = Object.keys(auditData);
+if (auditSection) {
+	const auditTabs = new Tabs(
+		"audit-tabs",
+		{
+			list: "audit__nav",
+			button: "tabs__nav-btn",
+			panel: "tabs__panel",
+		},
+		0
+	);
+
+	const nextButtons = document.querySelectorAll(".audit__button-next");
+	nextButtons.forEach((btn, idx) => {
+		btn.addEventListener("click", (e) => {
+			e.preventDefault();
+
+			// изменяем данные
+			let currentPanel = auditTabs.tabsPanels[idx];
+			updatePartData(currentPanel, idx);
+			updateLocalStorageData(companyId);
+
+			// переключаем на следующую панель
+			let nextPanel = document.querySelector(`#audit-tabs${idx + 2}`);
+			auditTabs.switchTabs(nextPanel);
+		});
 	});
-});
+}
 
 const mainTabs = new Tabs(
 	"root-tabs",
@@ -105,35 +125,42 @@ const mainTabs = new Tabs(
 	0
 );
 
-// data-saving
-const auditSection = document.querySelector(".audit");
-if (auditSection) {
-	const auditData = {
-		part1: {
-			textElements: [],
-			radioElements: [],
-		},
-		part2: { textElements: [], radioElements: [] },
-		part3: { textElements: [], radioElements: [] },
-	};
-	// const userInputElements = {
-	// 	textElements: [
-	// 		...auditSection.querySelectorAll("input[type='text']"),
-	// 		...auditSection.querySelectorAll("input[type='number']"),
-	// 		...auditSection.querySelectorAll("input[type='date']"),
-	// 		...auditSection.querySelectorAll("textarea"),
-	// 	],
-	// 	radioElements: getChunkedRadioInputs([...auditSection.querySelectorAll("input[type='radio']")], 2),
-	// };
-	// console.log(userInputElements);
+function updatePartData(panel, idx) {
+	auditData[auditDataKeys[idx]] = [
+		...getValueIdObjectsArray(panel.querySelectorAll("input[type='text']")),
+		...getValueIdObjectsArray(panel.querySelectorAll("input[type='number']")),
+		...getValueIdObjectsArray(panel.querySelectorAll("input[type='date']")),
+		...getValueIdObjectsArray(panel.querySelectorAll("textarea")),
+		...getValueIdObjectsArray(panel.querySelectorAll("input:checked")),
+	];
 }
 
-function getChunkedRadioInputs(notChunkedArray, chinkSize) {
-	let array = notChunkedArray;
-	let size = chinkSize;
-	let chunkedArray = [];
-	for (let i = 0; i < Math.ceil(array.length / size); i++) {
-		chunkedArray[i] = array.slice(i * size, i * size + size);
-	}
-	return chunkedArray;
+function updateLocalStorageData(companyId) {
+	console.log(auditData);
+	localStorage.setItem(`savedAuditData${companyId}`, JSON.stringify(auditData));
 }
+
+function getValueIdObjectsArray(nodes) {
+	let array = [];
+	nodes.forEach((node) => {
+		array.push({
+			nodeId: node.getAttribute("id"),
+			nodeValue: node.value,
+		});
+	});
+	return array;
+}
+
+function parseSavedAuditData() {
+	let savedAuditData = JSON.parse(localStorage.getItem(`savedAuditData${companyId}`));
+	for (const key in savedAuditData) {
+		if (Object.hasOwnProperty.call(savedAuditData, key)) {
+			const field = savedAuditData[key];
+			field.forEach((inputObj) => {
+				document.getElementById(inputObj.nodeId).value = inputObj.nodeValue;
+			});
+		}
+	}
+}
+
+parseSavedAuditData();

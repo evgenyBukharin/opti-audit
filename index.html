@@ -15,603 +15,2172 @@
 	<body class="page__body">
 		<div class="site-container">
 			<main class="main">
-				<section class="audit">
-					<div class="container audit__container">
-						<h2 class="title title__h2 audit__title">Страница аудита</h2>
-						<form class="audit__form" id="auditForm">
-							<div class="audit__row">
-								<div class="audit__cell audit__cell-title">Адрес портала</div>
-								<div class="audit__cell audit__cell-field audit__cell-8">
-									<input
-										class="audit__input"
-										type="text"
-										name="address"
-										id="address"
-										placeholder="Введите адрес"
-									/>
-								</div>
-							</div>
-							<div class="audit__row">
-								<div class="audit__cell audit__cell-title">Тариф портала</div>
-								<div class="audit__cell audit__cell-field audit__cell-8">
-									<input
-										class="audit__input"
-										type="text"
-										name="tarif"
-										id="tarif"
-										placeholder="Тариф портала"
-									/>
-								</div>
-							</div>
-							<div class="audit__row">
-								<div class="audit__cell audit__cell-title">Дата продления тарифа</div>
-								<div class="audit__cell audit__cell-field audit__cell-4">
-									<input class="audit__input" type="date" name="tarifRenewDate" id="tarifRenewDate" />
-								</div>
-							</div>
-							<div class="audit__row">
-								<div class="audit__cell audit__cell-title">Пульс портала</div>
-								<div class="audit__cell audit__cell-field audit__cell-8">
-									<label class="audit__label audit__label-file" for="pulse">
-										<input
-											class="audit__input audit__input-file"
-											type="file"
-											name="pulse"
-											id="pulse"
-											multiple
-										/>
-										<span class="audit__text">Выберите файлы</span>
-									</label>
-								</div>
-							</div>
-							<div class="audit__row">
-								<div class="audit__cell audit__cell-title">Количество сотрудников</div>
-								<div class="audit__cell audit__cell-field audit__cell-4">
-									<input
-										class="audit__input audit__input-number"
-										type="number"
-										name="employeeCount"
-										id="employeeCount"
-										placeholder="Введите количество"
-									/>
-								</div>
-							</div>
-							<div class="audit__row">
-								<div class="audit__cell audit__cell-title">Количество администраторов</div>
-								<div class="audit__cell audit__cell-field audit__cell-4">
-									<input
-										class="audit__input audit__input-number"
-										type="number"
-										name="adminCount"
-										id="adminCount"
-										placeholder="Введите количество"
-									/>
-								</div>
-							</div>
-							<div class="audit__row">
-								<div class="audit__cell audit__cell-title">Почты администраторов</div>
-								<div class="audit__cell audit__cell-field audit__cell-12">
-									<textarea class="audit__textarea audit__textarea-2" id="adminsEmails">
+				<div class="tabs root__tabs" data-tabs="root-tabs">
+					<ul class="tabs__nav root__nav list-reset">
+						<li class="root__item tabs__nav-item">
+							<button class="tabs__nav-btn root__btn" type="button">Создание аудита</button>
+						</li>
+						<li class="root__item tabs__nav-item">
+							<button class="tabs__nav-btn root__btn" type="button">Результаты</button>
+						</li>
+					</ul>
+					<div class="tabs__content root__content">
+						<div class="tabs__panel root__panel">
+							<section class="audit">
+								<div class="audit__container">
+									<form class="audit__form" id="auditForm">
+										<div class="tabs" data-tabs="audit-tabs">
+											<ul class="tabs__nav audit__nav list-reset">
+												<li class="tabs__nav-item">
+													<button
+														class="tabs__nav-btn audit__nav-btn btn-reset"
+														type="button"
+													>
+														Часть 1
+													</button>
+												</li>
+												<li class="tabs__nav-item">
+													<button
+														class="tabs__nav-btn audit__nav-btn btn-reset"
+														type="button"
+													>
+														Часть 2
+													</button>
+												</li>
+												<li class="tabs__nav-item">
+													<button
+														class="tabs__nav-btn audit__nav-btn btn-reset"
+														type="button"
+													>
+														Часть 3
+													</button>
+												</li>
+											</ul>
+											<div class="tabs__content">
+												<div class="tabs__panel audit__panel">
+													<div class="audit__row">
+														<div class="audit__cell audit__cell-title">Адрес портала</div>
+														<div class="audit__cell audit__cell-field audit__cell-8">
+															<input
+																class="audit__input"
+																type="text"
+																name="address"
+																id="address"
+																placeholder="Введите адрес"
+															/>
+														</div>
+													</div>
+													<div class="audit__row">
+														<div class="audit__cell audit__cell-title">Тариф портала</div>
+														<div class="audit__cell audit__cell-field audit__cell-8">
+															<input
+																class="audit__input"
+																type="text"
+																name="tarif"
+																id="tarif"
+																placeholder="Тариф портала"
+															/>
+														</div>
+													</div>
+													<div class="audit__row">
+														<div class="audit__cell audit__cell-title">
+															Дата продления тарифа
+														</div>
+														<div class="audit__cell audit__cell-field audit__cell-4">
+															<input
+																class="audit__input"
+																type="date"
+																name="tarifRenewDate"
+																id="tarifRenewDate"
+															/>
+														</div>
+													</div>
+													<div class="audit__row">
+														<div class="audit__cell audit__cell-title">Пульс портала</div>
+														<div class="audit__cell audit__cell-field audit__cell-8">
+															<label class="audit__label audit__label-file" for="pulse">
+																<input
+																	class="audit__input audit__input-file"
+																	type="file"
+																	name="pulse"
+																	id="pulse"
+																	multiple
+																/>
+																<span class="audit__text">Выберите файлы</span>
+															</label>
+														</div>
+													</div>
+													<div class="audit__row">
+														<div class="audit__cell audit__cell-title">
+															Количество сотрудников
+														</div>
+														<div class="audit__cell audit__cell-field audit__cell-4">
+															<input
+																class="audit__input audit__input-number"
+																type="number"
+																name="employeeCount"
+																id="employeeCount"
+																placeholder="Введите количество"
+															/>
+														</div>
+													</div>
+													<div class="audit__row">
+														<div class="audit__cell audit__cell-title">
+															Количество администраторов
+														</div>
+														<div class="audit__cell audit__cell-field audit__cell-4">
+															<input
+																class="audit__input audit__input-number"
+																type="number"
+																name="adminCount"
+																id="adminCount"
+																placeholder="Введите количество"
+															/>
+														</div>
+													</div>
+													<div class="audit__row">
+														<div class="audit__cell audit__cell-title">
+															Почты администраторов
+														</div>
+														<div class="audit__cell audit__cell-field audit__cell-12">
+															<textarea
+																class="audit__textarea audit__textarea-2"
+																id="adminsEmails"
+															>
 Вводить адреса через пробел, пример ниже (удалите весь текст из поля перед вводом):
 admin.email1@gmail.com admin.email2@gmail.com admin.email3@gmail.com
-					</textarea
-									>
+							</textarea
+															>
+														</div>
+													</div>
+													<div class="audit__row">
+														<div class="audit__cell audit__cell-title">
+															Реквизиты компании
+														</div>
+														<div class="audit__cell audit__cell-field audit__cell-8">
+															<label
+																class="audit__label audit__label-file"
+																for="requisites"
+															>
+																<input
+																	class="audit__input audit__input-file"
+																	type="file"
+																	id="requisites"
+																	id="requisites"
+																	multiple
+																/>
+																<span class="audit__text">Выберите файлы</span>
+															</label>
+														</div>
+													</div>
+													<div class="audit__row">
+														<div class="audit__cell audit__cell-title">
+															Наличие подписки на маркет
+														</div>
+														<div
+															class="audit__cell audit__cell-field audit__cell-field-radio audit__cell-3"
+														>
+															<label
+																class="audit__label audit__label-radio"
+																for="marketSub1"
+															>
+																<input
+																	class="audit__input audit__controller"
+																	value="Да"
+																	type="radio"
+																	name="marketSub"
+																	id="marketSub1"
+																/>
+																<span class="audit__text">Да</span>
+															</label>
+															<label
+																class="audit__label audit__label-radio"
+																for="marketSub2"
+															>
+																<input
+																	class="audit__input"
+																	value="Нет"
+																	type="radio"
+																	name="marketSub"
+																	id="marketSub2"
+																	checked
+																/>
+																<span class="audit__text">Нет</span>
+															</label>
+														</div>
+													</div>
+													<div class="audit__row">
+														<div class="audit__cell audit__cell-title">
+															Дата действия подписки на маркет
+														</div>
+														<div class="audit__cell audit__cell-field audit__cell-4">
+															<input
+																class="audit__input audit__input-before"
+																type="date"
+																name="subEndDate"
+																id="subEndDate"
+																data-before="до"
+															/>
+														</div>
+													</div>
+													<div class="audit__row">
+														<div class="audit__cell audit__cell-title">SIP-конектор</div>
+														<div
+															class="audit__cell audit__cell-field audit__cell-field-radio audit__cell-3"
+														>
+															<label
+																class="audit__label audit__label-radio"
+																for="sipconnector1"
+															>
+																<input
+																	class="audit__input"
+																	value="Да"
+																	type="radio"
+																	name="sipconnector"
+																	id="sipconnector1"
+																/>
+																<span class="audit__text">Да</span>
+															</label>
+															<label
+																class="audit__label audit__label-radio"
+																for="sipconnector2"
+															>
+																<input
+																	class="audit__input"
+																	value="Нет"
+																	type="radio"
+																	name="sipconnector"
+																	id="sipconnector2"
+																	checked
+																/>
+																<span class="audit__text">Нет</span>
+															</label>
+														</div>
+													</div>
+													<div class="audit__row">
+														<div class="audit__cell audit__cell-title">
+															Если есть SIP-конектор, то до какого числа оплачен
+														</div>
+														<div class="audit__cell audit__cell-field audit__cell-4">
+															<input
+																class="audit__input audit__input-before"
+																type="date"
+																name="sipConnectorEndDate"
+																id="sipConnectorEndDate"
+																data-before="до"
+															/>
+														</div>
+													</div>
+													<div class="audit__row">
+														<button class="btn-reset audit__button audit__button-next">
+															Сохранить
+														</button>
+													</div>
+												</div>
+												<div class="tabs__panel audit__panel">
+													<div class="audit__row">
+														<div class="audit__cell audit__cell-title">Телефония</div>
+														<div
+															class="audit__cell audit__cell-field audit__cell-field-radio audit__cell-3"
+														>
+															<label
+																class="audit__label audit__label-radio"
+																for="telefony1"
+															>
+																<input
+																	class="audit__input"
+																	value="Да"
+																	type="radio"
+																	name="telefony"
+																	id="telefony1"
+																/>
+																<span class="audit__text">Да</span>
+															</label>
+															<label
+																class="audit__label audit__label-radio"
+																for="telefony2"
+															>
+																<input
+																	class="audit__input"
+																	value="Нет"
+																	type="radio"
+																	name="telefony"
+																	id="telefony2"
+																	checked
+																/>
+																<span class="audit__text">Нет</span>
+															</label>
+														</div>
+													</div>
+													<div class="audit__row">
+														<div class="audit__cell audit__cell-title">
+															Права доступа телефонии
+														</div>
+														<div class="audit__cell audit__cell-field audit__cell-8">
+															<label
+																class="audit__label audit__label-file"
+																for="telefonyAccesses"
+															>
+																<input
+																	class="audit__input audit__input-file"
+																	type="file"
+																	name="telefonyAccesses"
+																	id="telefonyAccesses"
+																	multiple
+																/>
+																<span class="audit__text">Выберите файлы</span>
+															</label>
+														</div>
+													</div>
+													<div class="audit__row">
+														<div class="audit__cell audit__cell-title">
+															Есть ли бизнес-процессы
+														</div>
+														<div
+															class="audit__cell audit__cell-field audit__cell-field-radio audit__cell-3"
+														>
+															<label
+																class="audit__label audit__label-radio"
+																for="buzinessprocesses1"
+															>
+																<input
+																	class="audit__input"
+																	value="Да"
+																	type="radio"
+																	name="buzinessprocesses"
+																	id="buzinessprocesses1"
+																/>
+																<span class="audit__text">Да</span>
+															</label>
+															<label
+																class="audit__label audit__label-radio"
+																for="buzinessprocesses2"
+															>
+																<input
+																	class="audit__input"
+																	value="Нет"
+																	type="radio"
+																	name="buzinessprocesses"
+																	id="buzinessprocesses2"
+																	checked
+																/>
+																<span class="audit__text">Нет</span>
+															</label>
+														</div>
+													</div>
+													<div class="audit__row">
+														<div class="audit__cell audit__cell-title">
+															Если есть бизнес-процессы описание
+														</div>
+														<div class="audit__cell audit__cell-field audit__cell-12">
+															<textarea
+																class="audit__textarea audit__textarea-4"
+																name="buzinessprocessesDescr"
+																id="buzinessprocessesDescr"
+															></textarea>
+														</div>
+														<div
+															class="audit__cell audit__cell-field audit__cell-field-file audit__cell-5"
+														>
+															<label
+																class="audit__label audit__label-file"
+																for="buzinessprocessesFiles"
+															>
+																<input
+																	class="audit__input audit__input-file"
+																	type="file"
+																	name="buzinessprocessesFiles"
+																	id="buzinessprocessesFiles"
+																	multiple
+																/>
+																<span class="audit__text">Выберите файлы</span>
+															</label>
+														</div>
+													</div>
+													<div class="audit__row">
+														<div class="audit__cell audit__cell-title">
+															Есть ли смарт-процессы
+														</div>
+														<div
+															class="audit__cell audit__cell-field audit__cell-field-radio audit__cell-3"
+														>
+															<label
+																class="audit__label audit__label-radio"
+																for="smartsprocesses1"
+															>
+																<input
+																	class="audit__input"
+																	value="Да"
+																	type="radio"
+																	name="smartsprocesses"
+																	id="smartsprocesses1"
+																/>
+																<span class="audit__text">Да</span>
+															</label>
+															<label
+																class="audit__label audit__label-radio"
+																for="smartsprocesses2"
+															>
+																<input
+																	class="audit__input"
+																	value="Нет"
+																	type="radio"
+																	name="smartsprocesses"
+																	id="smartsprocesses2"
+																	checked
+																/>
+																<span class="audit__text">Нет</span>
+															</label>
+														</div>
+													</div>
+													<div class="audit__row">
+														<div class="audit__cell audit__cell-title">
+															Если есть смарт-процессы описание
+														</div>
+														<div class="audit__cell audit__cell-field audit__cell-12">
+															<textarea
+																class="audit__textarea audit__textarea-4"
+																name="smartprocessesDescr"
+																id="smartprocessesDescr"
+															></textarea>
+														</div>
+														<div
+															class="audit__cell audit__cell-field audit__cell-field-file audit__cell-5"
+														>
+															<label
+																class="audit__label audit__label-file"
+																for="smartprocessesFiles"
+															>
+																<input
+																	class="audit__input audit__input-file"
+																	type="file"
+																	name="smartprocessesFiles"
+																	id="smartprocessesFiles"
+																	multiple
+																/>
+																<span class="audit__text">Выберите файлы</span>
+															</label>
+														</div>
+													</div>
+													<div class="audit__row">
+														<div class="audit__cell audit__cell-title">
+															Бизнес-процессы живой ленты
+														</div>
+														<div class="audit__cell audit__cell-field audit__cell-16">
+															<input
+																class="audit__input"
+																type="text"
+																name="liveLine"
+																id="liveLine"
+																placeholder="Бизнес-процессы живой ленты"
+															/>
+														</div>
+													</div>
+													<div class="audit__row">
+														<div class="audit__cell audit__cell-title">
+															Количество установленных приложений
+														</div>
+														<div class="audit__cell audit__cell-field audit__cell-5">
+															<input
+																class="audit__input audit__input-number"
+																type="number"
+																name="appsInstalled"
+																id="appsInstalled"
+																placeholder="Количетсво приложений"
+															/>
+														</div>
+													</div>
+													<div class="audit__row">
+														<div class="audit__cell audit__cell-title">
+															Какие приложения установлены
+														</div>
+														<div class="audit__cell audit__cell-field audit__cell-12">
+															<textarea
+																class="audit__textarea audit__textarea-3"
+																name="whatAppsInstalled"
+																id="whatAppsInstalled"
+															></textarea>
+														</div>
+													</div>
+													<div class="audit__row">
+														<div class="audit__cell audit__cell-title">Воронка лидов</div>
+														<div class="audit__cell audit__cell-field audit__cell-8">
+															<label
+																class="audit__label audit__label-file"
+																for="leadsHopper"
+															>
+																<input
+																	class="audit__input audit__input-file"
+																	type="file"
+																	name="leadsHopper"
+																	id="leadsHopper"
+																	multiple
+																/>
+																<span class="audit__text">Выберите файлы</span>
+															</label>
+														</div>
+													</div>
+													<div class="audit__row">
+														<div class="audit__cell audit__cell-title">Роботы лидов</div>
+														<div class="audit__cell audit__cell-field audit__cell-12">
+															<textarea
+																class="audit__textarea audit__textarea-4"
+																name="leadsRobots"
+																id="leadsRobots"
+															></textarea>
+														</div>
+														<div
+															class="audit__cell audit__cell-field audit__cell-field-file audit__cell-5"
+														>
+															<label
+																class="audit__label audit__label-file"
+																for="leadsRobotsFiles"
+															>
+																<input
+																	class="audit__input audit__input-file"
+																	type="file"
+																	name="leadsRobotsFiles"
+																	id="leadsRobotsFiles"
+																	multiple
+																/>
+																<span class="audit__text">Выберите файлы</span>
+															</label>
+														</div>
+													</div>
+													<div class="audit__row">
+														<div class="audit__cell audit__cell-title">Воронка сделок</div>
+														<div class="audit__cell audit__cell-field audit__cell-8">
+															<label
+																class="audit__label audit__label-file"
+																for="dealsHopper"
+															>
+																<input
+																	class="audit__input audit__input-file"
+																	type="file"
+																	name="dealsHopper"
+																	id="dealsHopper"
+																	multiple
+																/>
+																<span class="audit__text">Выберите файлы</span>
+															</label>
+														</div>
+													</div>
+													<div class="audit__row audit__row-copying">
+														<div class="audit__cell audit__cell-title">Робот сделок</div>
+														<div class="audit__cell audit__cell-field audit__cell-12">
+															<textarea
+																class="audit__textarea audit__textarea-4"
+																name="dealsRobots-0"
+																id="dealsRobots-0"
+															></textarea>
+														</div>
+														<div
+															class="audit__cell audit__cell-field audit__cell-field-file audit__cell-5"
+														>
+															<label
+																class="audit__label audit__label-file"
+																for="dealsRobotsFiles-0"
+															>
+																<input
+																	class="audit__input audit__input-file"
+																	type="file"
+																	name="dealsRobotsFiles-0"
+																	id="dealsRobotsFiles-0"
+																	multiple
+																/>
+																<span class="audit__text">Выберите файлы</span>
+															</label>
+														</div>
+														<button class="btn-reset audit__button audit__button-new">
+															Добавить
+														</button>
+														<button class="btn-reset audit__button audit__button-delete">
+															Удалить
+														</button>
+													</div>
+													<div class="audit__row">
+														<button class="btn-reset audit__button audit__button-next">
+															Сохранить
+														</button>
+													</div>
+												</div>
+												<div class="tabs__panel audit__panel">
+													<div class="audit__row">
+														<div class="audit__cell audit__cell-title">
+															Права доступа в CRM
+														</div>
+														<div class="audit__cell audit__cell-field audit__cell-8">
+															<label
+																class="audit__label audit__label-file"
+																for="crmAccesses"
+															>
+																<input
+																	class="audit__input audit__input-file"
+																	type="file"
+																	id="crmAccesses"
+																	name="crmAccesses"
+																	multiple
+																/>
+																<span class="audit__text">Выберите файлы</span>
+															</label>
+														</div>
+													</div>
+													<div class="audit__row">
+														<div class="audit__cell audit__cell-title">CRM-документы</div>
+														<div class="audit__cell audit__cell-field audit__cell-8">
+															<label class="audit__label audit__label-file" for="crmDocs">
+																<input
+																	class="audit__input audit__input-file"
+																	type="file"
+																	name="crmDocs"
+																	id="crmDocs"
+																	multiple
+																/>
+																<span class="audit__text">Выберите файлы</span>
+															</label>
+														</div>
+													</div>
+													<div class="audit__row">
+														<div class="audit__cell audit__cell-title">
+															Дополнительные поля сущностей
+														</div>
+														<div class="audit__cell audit__cell-field audit__cell-8">
+															<label
+																class="audit__label audit__label-file"
+																for="entityExtraFields"
+															>
+																<input
+																	class="audit__input audit__input-file"
+																	type="file"
+																	name="entityExtraFields"
+																	id="entityExtraFields"
+																	multiple
+																/>
+																<span class="audit__text">Выберите файлы</span>
+															</label>
+														</div>
+													</div>
+													<div class="audit__row">
+														<div class="audit__cell audit__cell-title">Источники</div>
+														<div class="audit__cell audit__cell-field audit__cell-8">
+															<label class="audit__label audit__label-file" for="sources">
+																<input
+																	class="audit__input audit__input-file"
+																	type="file"
+																	name="sources"
+																	id="sources"
+																	multiple
+																/>
+																<span class="audit__text">Выберите файлы</span>
+															</label>
+														</div>
+													</div>
+													<div class="audit__row">
+														<div class="audit__cell audit__cell-title">Контакт-центр</div>
+														<div class="audit__cell audit__cell-field audit__cell-12">
+															<textarea
+																class="audit__textarea audit__textarea-4"
+																name="contactCenter"
+																id="contactCenter"
+															></textarea>
+														</div>
+														<div
+															class="audit__cell audit__cell-field audit__cell-field-file audit__cell-5"
+														>
+															<label
+																class="audit__label audit__label-file"
+																for="contactCenterFiles"
+															>
+																<input
+																	class="audit__input audit__input-file"
+																	type="file"
+																	name="contactCenterFiles"
+																	id="contactCenterFiles"
+																	multiple
+																/>
+																<span class="audit__text">Выберите файлы</span>
+															</label>
+														</div>
+													</div>
+													<div class="audit__row">
+														<div class="audit__cell audit__cell-title">
+															Список открытых линий
+														</div>
+														<div class="audit__cell audit__cell-field audit__cell-12">
+															<textarea
+																class="audit__textarea audit__textarea-4"
+																name="openLinesList"
+																id="openLinesList"
+															></textarea>
+														</div>
+													</div>
+													<div class="audit__row">
+														<div class="audit__cell audit__cell-title">Список CRM-форм</div>
+														<div class="audit__cell audit__cell-field audit__cell-8">
+															<label
+																class="audit__label audit__label-file"
+																for="crmForms"
+															>
+																<input
+																	class="audit__input audit__input-file"
+																	type="file"
+																	name="crmForms"
+																	id="crmForms"
+																	multiple
+																/>
+																<span class="audit__text">Выберите файлы</span>
+															</label>
+														</div>
+													</div>
+													<div class="audit__row">
+														<div class="audit__cell audit__cell-title">База знаний</div>
+														<div class="audit__cell audit__cell-field audit__cell-8">
+															<label
+																class="audit__label audit__label-file"
+																for="knowledgeBase"
+															>
+																<input
+																	class="audit__input audit__input-file"
+																	type="file"
+																	name="knowledgeBase"
+																	id="knowledgeBase"
+																	multiple
+																/>
+																<span class="audit__text">Выберите файлы</span>
+															</label>
+														</div>
+													</div>
+													<div class="audit__row">
+														<div class="audit__cell audit__cell-title">Диск, место</div>
+														<div class="audit__cell audit__cell-field audit__cell-8">
+															<label
+																class="audit__label audit__label-file"
+																for="diskSpace"
+															>
+																<input
+																	class="audit__input audit__input-file"
+																	type="file"
+																	name="diskSpace"
+																	id="diskSpace"
+																	multiple
+																/>
+																<span class="audit__text">Выберите файлы</span>
+															</label>
+														</div>
+													</div>
+													<div class="audit__row">
+														<div class="audit__cell audit__cell-title">Рабочие группы</div>
+														<div class="audit__cell audit__cell-field audit__cell-8">
+															<label
+																class="audit__label audit__label-file"
+																for="workGroups"
+															>
+																<input
+																	class="audit__input audit__input-file"
+																	type="file"
+																	name="workGroups"
+																	id="workGroups"
+																	multiple
+																/>
+																<span class="audit__text">Выберите файлы</span>
+															</label>
+														</div>
+													</div>
+													<div class="audit__row">
+														<div class="audit__cell audit__cell-title">
+															Сайты и маркетинг
+														</div>
+														<div class="audit__cell audit__cell-field audit__cell-8">
+															<label
+																class="audit__label audit__label-file"
+																for="sitesMarketing"
+															>
+																<input
+																	class="audit__input audit__input-file"
+																	type="file"
+																	name="sitesMarketing"
+																	id="sitesMarketing"
+																	multiple
+																/>
+																<span class="audit__text">Выберите файлы</span>
+															</label>
+														</div>
+													</div>
+													<div class="audit__row">
+														<div class="audit__cell audit__cell-title"></div>
+														<button class="btn-reset audit__button audit__button-save">
+															Отправить
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</form>
 								</div>
-							</div>
-							<div class="audit__row">
-								<div class="audit__cell audit__cell-title">Реквизиты компании</div>
-								<div class="audit__cell audit__cell-field audit__cell-8">
-									<label class="audit__label audit__label-file" for="requisites">
-										<input
-											class="audit__input audit__input-file"
-											type="file"
-											id="requisites"
-											id="requisites"
-											multiple
-										/>
-										<span class="audit__text">Выберите файлы</span>
-									</label>
+							</section>
+						</div>
+						<div class="tabs__panel root__panel">
+							<section class="result">
+								<div class="result__container">
+									<div class="audit__form">
+										<div class="audit__row">
+											<div class="audit__cell audit__cell-title">Адрес портала</div>
+											<div class="audit__cell audit__cell-field audit__cell-8">
+												<input
+													class="audit__input"
+													type="text"
+													name="address"
+													id="address"
+													readonly
+												/>
+											</div>
+										</div>
+										<div class="audit__row">
+											<div class="audit__cell audit__cell-title">Тариф портала</div>
+											<div class="audit__cell audit__cell-field audit__cell-8">
+												<input
+													class="audit__input"
+													type="text"
+													name="tarif"
+													id="tarif"
+													readonly
+												/>
+											</div>
+										</div>
+										<div class="audit__row">
+											<div class="audit__cell audit__cell-title">Дата продления тарифа</div>
+											<div class="audit__cell audit__cell-field audit__cell-4">
+												<input
+													class="audit__input"
+													type="text"
+													name="tarifRenewDate"
+													id="tarifRenewDate"
+													readonly
+												/>
+											</div>
+										</div>
+										<div class="audit__row">
+											<div class="audit__cell audit__cell-title">Пульс портала</div>
+											<div class="audit__cell audit__cell-field audit__cell-field-slider">
+												<div class="swiper result__slider">
+													<div class="swiper-wrapper result__wrapper">
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+													</div>
+													<div class="swiper-pagination result__pagination"></div>
+													<div class="result__navigation">
+														<button
+															class="btn-reset result__button-nav result__button-prev"
+														>
+															<svg class="result__arrow">
+																<use xlink:href="img/sprite.svg#left-arrow"></use>
+															</svg>
+														</button>
+														<button
+															class="btn-reset result__button-nav result__button-next"
+														>
+															<svg class="result__arrow">
+																<use xlink:href="img/sprite.svg#left-arrow"></use>
+															</svg>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="audit__row">
+											<div class="audit__cell audit__cell-title">Количество сотрудников</div>
+											<div class="audit__cell audit__cell-field audit__cell-4">
+												<input
+													class="audit__input audit__input-number"
+													type="number"
+													name="employeeCount"
+													id="employeeCount"
+													readonly
+												/>
+											</div>
+										</div>
+										<div class="audit__row">
+											<div class="audit__cell audit__cell-title">Количество администраторов</div>
+											<div class="audit__cell audit__cell-field audit__cell-4">
+												<input
+													class="audit__input audit__input-number"
+													type="number"
+													name="adminCount"
+													id="adminCount"
+													readonly
+												/>
+											</div>
+										</div>
+										<div class="audit__row">
+											<div class="audit__cell audit__cell-title">Почты администраторов</div>
+											<div class="audit__cell audit__cell-field audit__cell-12">
+												<textarea
+													class="audit__textarea audit__textarea-2"
+													id="adminsEmails"
+													readonly
+												></textarea>
+											</div>
+										</div>
+										<div class="audit__row">
+											<div class="audit__cell audit__cell-title">Реквизиты компании</div>
+											<div class="audit__cell audit__cell-field audit__cell-field-slider">
+												<div class="swiper result__slider">
+													<div class="swiper-wrapper result__wrapper">
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+													</div>
+													<div class="swiper-pagination result__pagination"></div>
+													<div class="result__navigation">
+														<button
+															class="btn-reset result__button-nav result__button-prev"
+														>
+															<svg class="result__arrow">
+																<use xlink:href="img/sprite.svg#left-arrow"></use>
+															</svg>
+														</button>
+														<button
+															class="btn-reset result__button-nav result__button-next"
+														>
+															<svg class="result__arrow">
+																<use xlink:href="img/sprite.svg#left-arrow"></use>
+															</svg>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="audit__row">
+											<div class="audit__cell audit__cell-title">Наличие подписки на маркет</div>
+											<div
+												class="audit__cell audit__cell-field audit__cell-field-radio audit__cell-3"
+											>
+												<label class="audit__label audit__label-radio" for="marketSub1">
+													<input
+														class="audit__input audit__controller"
+														value="Да"
+														type="radio"
+														name="marketSub"
+														id="marketSub1"
+														checked
+														disabled
+													/>
+													<span class="audit__text">Да</span>
+												</label>
+												<label class="audit__label audit__label-radio" for="marketSub2">
+													<input
+														class="audit__input"
+														value="Нет"
+														type="radio"
+														name="marketSub"
+														id="marketSub2"
+														disabled
+													/>
+													<span class="audit__text">Нет</span>
+												</label>
+											</div>
+										</div>
+										<div class="audit__row">
+											<div class="audit__cell audit__cell-title">
+												Дата действия подписки на маркет
+											</div>
+											<div class="audit__cell audit__cell-field audit__cell-4">
+												<input
+													class="audit__input audit__input-before"
+													type="date"
+													name="subEndDate"
+													id="subEndDate"
+													data-before="до"
+													disabled
+												/>
+											</div>
+										</div>
+										<div class="audit__row">
+											<div class="audit__cell audit__cell-title">SIP-конектор</div>
+											<div
+												class="audit__cell audit__cell-field audit__cell-field-radio audit__cell-3"
+											>
+												<label class="audit__label audit__label-radio" for="sipconnector1">
+													<input
+														class="audit__input"
+														value="Да"
+														type="radio"
+														name="sipconnector"
+														id="sipconnector1"
+														disabled
+														checked
+													/>
+													<span class="audit__text">Да</span>
+												</label>
+												<label class="audit__label audit__label-radio" for="sipconnector2">
+													<input
+														class="audit__input"
+														value="Нет"
+														type="radio"
+														name="sipconnector"
+														id="sipconnector2"
+														disabled
+													/>
+													<span class="audit__text">Нет</span>
+												</label>
+											</div>
+										</div>
+										<div class="audit__row">
+											<div class="audit__cell audit__cell-title">
+												Если есть SIP-конектор, то до какого числа оплачен
+											</div>
+											<div class="audit__cell audit__cell-field audit__cell-4">
+												<input
+													class="audit__input audit__input-before"
+													type="date"
+													name="sipConnectorEndDate"
+													id="sipConnectorEndDate"
+													data-before="до"
+												/>
+											</div>
+										</div>
+										<div class="audit__row">
+											<div class="audit__cell audit__cell-title">Телефония</div>
+											<div
+												class="audit__cell audit__cell-field audit__cell-field-radio audit__cell-3"
+											>
+												<label class="audit__label audit__label-radio" for="telefony1">
+													<input
+														class="audit__input"
+														value="Да"
+														type="radio"
+														name="telefony"
+														id="telefony1"
+														checked
+														disabled
+													/>
+													<span class="audit__text">Да</span>
+												</label>
+												<label class="audit__label audit__label-radio" for="telefony2">
+													<input
+														class="audit__input"
+														value="Нет"
+														type="radio"
+														name="telefony"
+														id="telefony2"
+														disabled
+													/>
+													<span class="audit__text">Нет</span>
+												</label>
+											</div>
+										</div>
+										<div class="audit__row">
+											<div class="audit__cell audit__cell-title">Права доступа телефонии</div>
+											<div class="audit__cell audit__cell-field audit__cell-field-slider">
+												<div class="swiper result__slider">
+													<div class="swiper-wrapper result__wrapper">
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+													</div>
+													<div class="swiper-pagination result__pagination"></div>
+													<div class="result__navigation">
+														<button
+															class="btn-reset result__button-nav result__button-prev"
+														>
+															<svg class="result__arrow">
+																<use xlink:href="img/sprite.svg#left-arrow"></use>
+															</svg>
+														</button>
+														<button
+															class="btn-reset result__button-nav result__button-next"
+														>
+															<svg class="result__arrow">
+																<use xlink:href="img/sprite.svg#left-arrow"></use>
+															</svg>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="audit__row">
+											<div class="audit__cell audit__cell-title">Есть ли бизнес-процессы</div>
+											<div
+												class="audit__cell audit__cell-field audit__cell-field-radio audit__cell-3"
+											>
+												<label class="audit__label audit__label-radio" for="buzinessprocesses1">
+													<input
+														class="audit__input"
+														value="Да"
+														type="radio"
+														name="buzinessprocesses"
+														id="buzinessprocesses1"
+														checked
+														disabled
+													/>
+													<span class="audit__text">Да</span>
+												</label>
+												<label class="audit__label audit__label-radio" for="buzinessprocesses2">
+													<input
+														class="audit__input"
+														value="Нет"
+														type="radio"
+														name="buzinessprocesses"
+														id="buzinessprocesses2"
+														disabled
+													/>
+													<span class="audit__text">Нет</span>
+												</label>
+											</div>
+										</div>
+										<div class="audit__row">
+											<div class="audit__cell audit__cell-title">
+												Если есть бизнес-процессы описание
+											</div>
+											<div class="audit__cell audit__cell-field audit__cell-10">
+												<textarea
+													class="audit__textarea audit__textarea-100"
+													name="buzinessprocessesDescr"
+													id="buzinessprocessesDescr"
+													readonly
+												></textarea>
+											</div>
+											<div class="audit__cell audit__cell-field audit__cell-field-slider">
+												<div class="swiper result__slider">
+													<div class="swiper-wrapper result__wrapper">
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+													</div>
+													<div class="swiper-pagination result__pagination"></div>
+													<div class="result__navigation">
+														<button
+															class="btn-reset result__button-nav result__button-prev"
+														>
+															<svg class="result__arrow">
+																<use xlink:href="img/sprite.svg#left-arrow"></use>
+															</svg>
+														</button>
+														<button
+															class="btn-reset result__button-nav result__button-next"
+														>
+															<svg class="result__arrow">
+																<use xlink:href="img/sprite.svg#left-arrow"></use>
+															</svg>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="audit__row">
+											<div class="audit__cell audit__cell-title">Есть ли смарт-процессы</div>
+											<div
+												class="audit__cell audit__cell-field audit__cell-field-radio audit__cell-3"
+											>
+												<label class="audit__label audit__label-radio" for="smartsprocesses1">
+													<input
+														class="audit__input"
+														value="Да"
+														type="radio"
+														name="smartsprocesses"
+														id="smartsprocesses1"
+														checked
+														disabled
+													/>
+													<span class="audit__text">Да</span>
+												</label>
+												<label class="audit__label audit__label-radio" for="smartsprocesses2">
+													<input
+														class="audit__input"
+														value="Нет"
+														type="radio"
+														name="smartsprocesses"
+														id="smartsprocesses2"
+														disabled
+													/>
+													<span class="audit__text">Нет</span>
+												</label>
+											</div>
+										</div>
+										<div class="audit__row">
+											<div class="audit__cell audit__cell-title">
+												Если есть смарт-процессы описание
+											</div>
+											<div class="audit__cell audit__cell-field audit__cell-10">
+												<textarea
+													class="audit__textarea audit__textarea-100"
+													name="smartprocessesDescr"
+													id="smartprocessesDescr"
+													readonly
+												></textarea>
+											</div>
+											<div class="audit__cell audit__cell-field audit__cell-field-slider">
+												<div class="swiper result__slider">
+													<div class="swiper-wrapper result__wrapper">
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+													</div>
+													<div class="swiper-pagination result__pagination"></div>
+													<div class="result__navigation">
+														<button
+															class="btn-reset result__button-nav result__button-prev"
+														>
+															<svg class="result__arrow">
+																<use xlink:href="img/sprite.svg#left-arrow"></use>
+															</svg>
+														</button>
+														<button
+															class="btn-reset result__button-nav result__button-next"
+														>
+															<svg class="result__arrow">
+																<use xlink:href="img/sprite.svg#left-arrow"></use>
+															</svg>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="audit__row">
+											<div class="audit__cell audit__cell-title">Бизнес-процессы живой ленты</div>
+											<div class="audit__cell audit__cell-field audit__cell-16">
+												<input
+													class="audit__input"
+													type="text"
+													name="liveLine"
+													id="liveLine"
+													disabled
+												/>
+											</div>
+										</div>
+										<div class="audit__row">
+											<div class="audit__cell audit__cell-title">
+												Количество установленных приложений
+											</div>
+											<div class="audit__cell audit__cell-field audit__cell-5">
+												<input
+													class="audit__input audit__input-number"
+													type="number"
+													name="appsInstalled"
+													id="appsInstalled"
+													disabled
+												/>
+											</div>
+										</div>
+										<div class="audit__row">
+											<div class="audit__cell audit__cell-title">
+												Какие приложения установлены
+											</div>
+											<div class="audit__cell audit__cell-field audit__cell-12">
+												<textarea
+													class="audit__textarea audit__textarea-3"
+													name="whatAppsInstalled"
+													id="whatAppsInstalled"
+													readonly
+												></textarea>
+											</div>
+										</div>
+										<div class="audit__row">
+											<div class="audit__cell audit__cell-title">Воронка лидов</div>
+											<div class="audit__cell audit__cell-field audit__cell-field-slider">
+												<div class="swiper result__slider">
+													<div class="swiper-wrapper result__wrapper">
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+													</div>
+													<div class="swiper-pagination result__pagination"></div>
+													<div class="result__navigation">
+														<button
+															class="btn-reset result__button-nav result__button-prev"
+														>
+															<svg class="result__arrow">
+																<use xlink:href="img/sprite.svg#left-arrow"></use>
+															</svg>
+														</button>
+														<button
+															class="btn-reset result__button-nav result__button-next"
+														>
+															<svg class="result__arrow">
+																<use xlink:href="img/sprite.svg#left-arrow"></use>
+															</svg>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="audit__row">
+											<div class="audit__cell audit__cell-title">Роботы лидов</div>
+											<div class="audit__cell audit__cell-field audit__cell-10">
+												<textarea
+													class="audit__textarea audit__textarea-100"
+													name="leadsRobots"
+													id="leadsRobots"
+													readonly
+												></textarea>
+											</div>
+											<div class="audit__cell audit__cell-field audit__cell-field-slider">
+												<div class="swiper result__slider">
+													<div class="swiper-wrapper result__wrapper">
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+													</div>
+													<div class="swiper-pagination result__pagination"></div>
+													<div class="result__navigation">
+														<button
+															class="btn-reset result__button-nav result__button-prev"
+														>
+															<svg class="result__arrow">
+																<use xlink:href="img/sprite.svg#left-arrow"></use>
+															</svg>
+														</button>
+														<button
+															class="btn-reset result__button-nav result__button-next"
+														>
+															<svg class="result__arrow">
+																<use xlink:href="img/sprite.svg#left-arrow"></use>
+															</svg>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="audit__row">
+											<div class="audit__cell audit__cell-title">Воронка сделок</div>
+											<div class="audit__cell audit__cell-field audit__cell-field-slider">
+												<div class="swiper result__slider">
+													<div class="swiper-wrapper result__wrapper">
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+													</div>
+													<div class="swiper-pagination result__pagination"></div>
+													<div class="result__navigation">
+														<button
+															class="btn-reset result__button-nav result__button-prev"
+														>
+															<svg class="result__arrow">
+																<use xlink:href="img/sprite.svg#left-arrow"></use>
+															</svg>
+														</button>
+														<button
+															class="btn-reset result__button-nav result__button-next"
+														>
+															<svg class="result__arrow">
+																<use xlink:href="img/sprite.svg#left-arrow"></use>
+															</svg>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="audit__row audit__row-copying">
+											<div class="audit__cell audit__cell-title">Робот сделок</div>
+											<div class="audit__cell audit__cell-field audit__cell-7">
+												<textarea
+													class="audit__textarea audit__textarea-100"
+													name="dealsRobots-0"
+													id="dealsRobots-0"
+													readonly
+												></textarea>
+											</div>
+											<div class="audit__cell audit__cell-field audit__cell-field-slider">
+												<div class="swiper result__slider">
+													<div class="swiper-wrapper result__wrapper">
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+													</div>
+													<div class="swiper-pagination result__pagination"></div>
+													<div class="result__navigation">
+														<button
+															class="btn-reset result__button-nav result__button-prev"
+														>
+															<svg class="result__arrow">
+																<use xlink:href="img/sprite.svg#left-arrow"></use>
+															</svg>
+														</button>
+														<button
+															class="btn-reset result__button-nav result__button-next"
+														>
+															<svg class="result__arrow">
+																<use xlink:href="img/sprite.svg#left-arrow"></use>
+															</svg>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="audit__row">
+											<div class="audit__cell audit__cell-title">Права доступа в CRM</div>
+											<div class="audit__cell audit__cell-field audit__cell-field-slider">
+												<div class="swiper result__slider">
+													<div class="swiper-wrapper result__wrapper">
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+													</div>
+													<div class="swiper-pagination result__pagination"></div>
+													<div class="result__navigation">
+														<button
+															class="btn-reset result__button-nav result__button-prev"
+														>
+															<svg class="result__arrow">
+																<use xlink:href="img/sprite.svg#left-arrow"></use>
+															</svg>
+														</button>
+														<button
+															class="btn-reset result__button-nav result__button-next"
+														>
+															<svg class="result__arrow">
+																<use xlink:href="img/sprite.svg#left-arrow"></use>
+															</svg>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="audit__row">
+											<div class="audit__cell audit__cell-title">CRM-документы</div>
+											<div class="audit__cell audit__cell-field audit__cell-field-slider">
+												<div class="swiper result__slider">
+													<div class="swiper-wrapper result__wrapper">
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+													</div>
+													<div class="swiper-pagination result__pagination"></div>
+													<div class="result__navigation">
+														<button
+															class="btn-reset result__button-nav result__button-prev"
+														>
+															<svg class="result__arrow">
+																<use xlink:href="img/sprite.svg#left-arrow"></use>
+															</svg>
+														</button>
+														<button
+															class="btn-reset result__button-nav result__button-next"
+														>
+															<svg class="result__arrow">
+																<use xlink:href="img/sprite.svg#left-arrow"></use>
+															</svg>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="audit__row">
+											<div class="audit__cell audit__cell-title">
+												Дополнительные поля сущностей
+											</div>
+											<div class="audit__cell audit__cell-field audit__cell-field-slider">
+												<div class="swiper result__slider">
+													<div class="swiper-wrapper result__wrapper">
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+													</div>
+													<div class="swiper-pagination result__pagination"></div>
+													<div class="result__navigation">
+														<button
+															class="btn-reset result__button-nav result__button-prev"
+														>
+															<svg class="result__arrow">
+																<use xlink:href="img/sprite.svg#left-arrow"></use>
+															</svg>
+														</button>
+														<button
+															class="btn-reset result__button-nav result__button-next"
+														>
+															<svg class="result__arrow">
+																<use xlink:href="img/sprite.svg#left-arrow"></use>
+															</svg>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="audit__row">
+											<div class="audit__cell audit__cell-title">Источники</div>
+											<div class="audit__cell audit__cell-field audit__cell-field-slider">
+												<div class="swiper result__slider">
+													<div class="swiper-wrapper result__wrapper">
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+													</div>
+													<div class="swiper-pagination result__pagination"></div>
+													<div class="result__navigation">
+														<button
+															class="btn-reset result__button-nav result__button-prev"
+														>
+															<svg class="result__arrow">
+																<use xlink:href="img/sprite.svg#left-arrow"></use>
+															</svg>
+														</button>
+														<button
+															class="btn-reset result__button-nav result__button-next"
+														>
+															<svg class="result__arrow">
+																<use xlink:href="img/sprite.svg#left-arrow"></use>
+															</svg>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="audit__row">
+											<div class="audit__cell audit__cell-title">Контакт-центр</div>
+											<div class="audit__cell audit__cell-field audit__cell-10">
+												<textarea
+													class="audit__textarea audit__textarea-100"
+													name="contactCenter"
+													id="contactCenter"
+													readonly
+												></textarea>
+											</div>
+											<div class="audit__cell audit__cell-field audit__cell-field-slider">
+												<div class="swiper result__slider">
+													<div class="swiper-wrapper result__wrapper">
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+													</div>
+													<div class="swiper-pagination result__pagination"></div>
+													<div class="result__navigation">
+														<button
+															class="btn-reset result__button-nav result__button-prev"
+														>
+															<svg class="result__arrow">
+																<use xlink:href="img/sprite.svg#left-arrow"></use>
+															</svg>
+														</button>
+														<button
+															class="btn-reset result__button-nav result__button-next"
+														>
+															<svg class="result__arrow">
+																<use xlink:href="img/sprite.svg#left-arrow"></use>
+															</svg>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="audit__row">
+											<div class="audit__cell audit__cell-title">Список открытых линий</div>
+											<div class="audit__cell audit__cell-field audit__cell-12">
+												<textarea
+													class="audit__textarea audit__textarea-4"
+													name="openLinesList"
+													id="openLinesList"
+													readonly
+												></textarea>
+											</div>
+										</div>
+										<div class="audit__row">
+											<div class="audit__cell audit__cell-title">Список CRM-форм</div>
+											<div class="audit__cell audit__cell-field audit__cell-field-slider">
+												<div class="swiper result__slider">
+													<div class="swiper-wrapper result__wrapper">
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+													</div>
+													<div class="swiper-pagination result__pagination"></div>
+													<div class="result__navigation">
+														<button
+															class="btn-reset result__button-nav result__button-prev"
+														>
+															<svg class="result__arrow">
+																<use xlink:href="img/sprite.svg#left-arrow"></use>
+															</svg>
+														</button>
+														<button
+															class="btn-reset result__button-nav result__button-next"
+														>
+															<svg class="result__arrow">
+																<use xlink:href="img/sprite.svg#left-arrow"></use>
+															</svg>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="audit__row">
+											<div class="audit__cell audit__cell-title">База знаний</div>
+											<div class="audit__cell audit__cell-field audit__cell-field-slider">
+												<div class="swiper result__slider">
+													<div class="swiper-wrapper result__wrapper">
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+													</div>
+													<div class="swiper-pagination result__pagination"></div>
+													<div class="result__navigation">
+														<button
+															class="btn-reset result__button-nav result__button-prev"
+														>
+															<svg class="result__arrow">
+																<use xlink:href="img/sprite.svg#left-arrow"></use>
+															</svg>
+														</button>
+														<button
+															class="btn-reset result__button-nav result__button-next"
+														>
+															<svg class="result__arrow">
+																<use xlink:href="img/sprite.svg#left-arrow"></use>
+															</svg>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="audit__row">
+											<div class="audit__cell audit__cell-title">Диск, место</div>
+											<div class="audit__cell audit__cell-field audit__cell-field-slider">
+												<div class="swiper result__slider">
+													<div class="swiper-wrapper result__wrapper">
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+													</div>
+													<div class="swiper-pagination result__pagination"></div>
+													<div class="result__navigation">
+														<button
+															class="btn-reset result__button-nav result__button-prev"
+														>
+															<svg class="result__arrow">
+																<use xlink:href="img/sprite.svg#left-arrow"></use>
+															</svg>
+														</button>
+														<button
+															class="btn-reset result__button-nav result__button-next"
+														>
+															<svg class="result__arrow">
+																<use xlink:href="img/sprite.svg#left-arrow"></use>
+															</svg>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="audit__row">
+											<div class="audit__cell audit__cell-title">Рабочие группы</div>
+											<div class="audit__cell audit__cell-field audit__cell-field-slider">
+												<div class="swiper result__slider">
+													<div class="swiper-wrapper result__wrapper">
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+													</div>
+													<div class="swiper-pagination result__pagination"></div>
+													<div class="result__navigation">
+														<button
+															class="btn-reset result__button-nav result__button-prev"
+														>
+															<svg class="result__arrow">
+																<use xlink:href="img/sprite.svg#left-arrow"></use>
+															</svg>
+														</button>
+														<button
+															class="btn-reset result__button-nav result__button-next"
+														>
+															<svg class="result__arrow">
+																<use xlink:href="img/sprite.svg#left-arrow"></use>
+															</svg>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="audit__row">
+											<div class="audit__cell audit__cell-title">Сайты и маркетинг</div>
+											<div class="audit__cell audit__cell-field audit__cell-field-slider">
+												<div class="swiper result__slider">
+													<div class="swiper-wrapper result__wrapper">
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+														<div class="swiper-slide result__slide">
+															<img
+																src="./img/corgi.jpg"
+																class="image result__image"
+																width="300"
+																height="300"
+																alt="Корги"
+															/>
+														</div>
+													</div>
+													<div class="swiper-pagination result__pagination"></div>
+													<div class="result__navigation">
+														<button
+															class="btn-reset result__button-nav result__button-prev"
+														>
+															<svg class="result__arrow">
+																<use xlink:href="img/sprite.svg#left-arrow"></use>
+															</svg>
+														</button>
+														<button
+															class="btn-reset result__button-nav result__button-next"
+														>
+															<svg class="result__arrow">
+																<use xlink:href="img/sprite.svg#left-arrow"></use>
+															</svg>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
-							</div>
-							<div class="audit__row">
-								<div class="audit__cell audit__cell-title">Наличие подписки на маркет</div>
-								<div class="audit__cell audit__cell-field audit__cell-field-radio audit__cell-3">
-									<label class="audit__label audit__label-radio" for="marketSub1">
-										<input
-											class="audit__input audit__controller"
-											value="Да"
-											type="radio"
-											name="marketSub"
-											id="marketSub1"
-										/>
-										<span class="audit__text">Да</span>
-									</label>
-									<label class="audit__label audit__label-radio" for="marketSub2">
-										<input
-											class="audit__input"
-											value="Нет"
-											type="radio"
-											name="marketSub"
-											id="marketSub2"
-											checked
-										/>
-										<span class="audit__text">Нет</span>
-									</label>
-								</div>
-							</div>
-							<div class="audit__row">
-								<div class="audit__cell audit__cell-title">Дата действия подписки на маркет</div>
-								<div class="audit__cell audit__cell-field audit__cell-4">
-									<input
-										class="audit__input audit__input-before"
-										type="date"
-										name="subEndDate"
-										id="subEndDate"
-										data-before="до"
-									/>
-								</div>
-							</div>
-							<div class="audit__row">
-								<div class="audit__cell audit__cell-title">SIP-конектор</div>
-								<div class="audit__cell audit__cell-field audit__cell-field-radio audit__cell-3">
-									<label class="audit__label audit__label-radio" for="sipconnector1">
-										<input
-											class="audit__input"
-											value="Да"
-											type="radio"
-											name="sipconnector"
-											id="sipconnector1"
-										/>
-										<span class="audit__text">Да</span>
-									</label>
-									<label class="audit__label audit__label-radio" for="sipconnector2">
-										<input
-											class="audit__input"
-											value="Нет"
-											type="radio"
-											name="sipconnector"
-											id="sipconnector2"
-											checked
-										/>
-										<span class="audit__text">Нет</span>
-									</label>
-								</div>
-							</div>
-							<div class="audit__row">
-								<div class="audit__cell audit__cell-title">
-									Если есть SIP-конектор, то до какого числа оплачен
-								</div>
-								<div class="audit__cell audit__cell-field audit__cell-4">
-									<input
-										class="audit__input audit__input-before"
-										type="date"
-										name="sipConnectorEndDate"
-										id="sipConnectorEndDate"
-										data-before="до"
-									/>
-								</div>
-							</div>
-							<div class="audit__row">
-								<div class="audit__cell audit__cell-title">Телефония</div>
-								<div class="audit__cell audit__cell-field audit__cell-field-radio audit__cell-3">
-									<label class="audit__label audit__label-radio" for="telefony1">
-										<input
-											class="audit__input"
-											value="Да"
-											type="radio"
-											name="telefony"
-											id="telefony1"
-										/>
-										<span class="audit__text">Да</span>
-									</label>
-									<label class="audit__label audit__label-radio" for="telefony2">
-										<input
-											class="audit__input"
-											value="Нет"
-											type="radio"
-											name="telefony"
-											id="telefony2"
-											checked
-										/>
-										<span class="audit__text">Нет</span>
-									</label>
-								</div>
-							</div>
-							<div class="audit__row">
-								<div class="audit__cell audit__cell-title">Права доступа телефонии</div>
-								<div class="audit__cell audit__cell-field audit__cell-8">
-									<label class="audit__label audit__label-file" for="telefonyAccesses">
-										<input
-											class="audit__input audit__input-file"
-											type="file"
-											name="telefonyAccesses"
-											id="telefonyAccesses"
-											multiple
-										/>
-										<span class="audit__text">Выберите файлы</span>
-									</label>
-								</div>
-							</div>
-							<div class="audit__row">
-								<div class="audit__cell audit__cell-title">Есть ли бизнес-процессы</div>
-								<div class="audit__cell audit__cell-field audit__cell-field-radio audit__cell-3">
-									<label class="audit__label audit__label-radio" for="buzinessprocesses1">
-										<input
-											class="audit__input"
-											value="Да"
-											type="radio"
-											name="buzinessprocesses"
-											id="buzinessprocesses1"
-										/>
-										<span class="audit__text">Да</span>
-									</label>
-									<label class="audit__label audit__label-radio" for="buzinessprocesses2">
-										<input
-											class="audit__input"
-											value="Нет"
-											type="radio"
-											name="buzinessprocesses"
-											id="buzinessprocesses2"
-											checked
-										/>
-										<span class="audit__text">Нет</span>
-									</label>
-								</div>
-							</div>
-							<div class="audit__row">
-								<div class="audit__cell audit__cell-title">Если есть бизнес-процессы описание</div>
-								<div class="audit__cell audit__cell-field audit__cell-12">
-									<textarea
-										class="audit__textarea audit__textarea-4"
-										name="buzinessprocessesDescr"
-										id="buzinessprocessesDescr"
-									></textarea>
-								</div>
-								<div class="audit__cell audit__cell-field audit__cell-field-file audit__cell-5">
-									<label class="audit__label audit__label-file" for="buzinessprocessesFiles">
-										<input
-											class="audit__input audit__input-file"
-											type="file"
-											name="buzinessprocessesFiles"
-											id="buzinessprocessesFiles"
-											multiple
-										/>
-										<span class="audit__text">Выберите файлы</span>
-									</label>
-								</div>
-							</div>
-							<div class="audit__row">
-								<div class="audit__cell audit__cell-title">Есть ли смарт-процессы</div>
-								<div class="audit__cell audit__cell-field audit__cell-field-radio audit__cell-3">
-									<label class="audit__label audit__label-radio" for="smartsprocesses1">
-										<input
-											class="audit__input"
-											value="Да"
-											type="radio"
-											name="smartsprocesses"
-											id="smartsprocesses1"
-										/>
-										<span class="audit__text">Да</span>
-									</label>
-									<label class="audit__label audit__label-radio" for="smartsprocesses2">
-										<input
-											class="audit__input"
-											value="Нет"
-											type="radio"
-											name="smartsprocesses"
-											id="smartsprocesses2"
-											checked
-										/>
-										<span class="audit__text">Нет</span>
-									</label>
-								</div>
-							</div>
-							<div class="audit__row">
-								<div class="audit__cell audit__cell-title">Если есть смарт-процессы описание</div>
-								<div class="audit__cell audit__cell-field audit__cell-12">
-									<textarea
-										class="audit__textarea audit__textarea-4"
-										name="smartprocessesDescr"
-										id="smartprocessesDescr"
-									></textarea>
-								</div>
-								<div class="audit__cell audit__cell-field audit__cell-field-file audit__cell-5">
-									<label class="audit__label audit__label-file" for="smartprocessesFiles">
-										<input
-											class="audit__input audit__input-file"
-											type="file"
-											name="smartprocessesFiles"
-											id="smartprocessesFiles"
-											multiple
-										/>
-										<span class="audit__text">Выберите файлы</span>
-									</label>
-								</div>
-							</div>
-							<div class="audit__row">
-								<div class="audit__cell audit__cell-title">Бизнес-процессы живой ленты</div>
-								<div class="audit__cell audit__cell-field audit__cell-16">
-									<input
-										class="audit__input"
-										type="text"
-										name="liveLine"
-										id="liveLine"
-										placeholder="Бизнес-процессы живой ленты"
-									/>
-								</div>
-							</div>
-							<div class="audit__row">
-								<div class="audit__cell audit__cell-title">Количество установленных приложений</div>
-								<div class="audit__cell audit__cell-field audit__cell-5">
-									<input
-										class="audit__input audit__input-number"
-										type="number"
-										name="appsInstalled"
-										id="appsInstalled"
-										placeholder="Количетсво приложений"
-									/>
-								</div>
-							</div>
-							<div class="audit__row">
-								<div class="audit__cell audit__cell-title">Какие приложения установлены</div>
-								<div class="audit__cell audit__cell-field audit__cell-12">
-									<textarea
-										class="audit__textarea audit__textarea-3"
-										name="whatAppsInstalled"
-										id="whatAppsInstalled"
-									></textarea>
-								</div>
-							</div>
-							<div class="audit__row">
-								<div class="audit__cell audit__cell-title">Воронка лидов</div>
-								<div class="audit__cell audit__cell-field audit__cell-8">
-									<label class="audit__label audit__label-file" for="leadsHopper">
-										<input
-											class="audit__input audit__input-file"
-											type="file"
-											name="leadsHopper"
-											id="leadsHopper"
-											multiple
-										/>
-										<span class="audit__text">Выберите файлы</span>
-									</label>
-								</div>
-							</div>
-							<div class="audit__row">
-								<div class="audit__cell audit__cell-title">Роботы лидов</div>
-								<div class="audit__cell audit__cell-field audit__cell-12">
-									<textarea
-										class="audit__textarea audit__textarea-4"
-										name="leadsRobots"
-										id="leadsRobots"
-									></textarea>
-								</div>
-								<div class="audit__cell audit__cell-field audit__cell-field-file audit__cell-5">
-									<label class="audit__label audit__label-file" for="leadsRobotsFiles">
-										<input
-											class="audit__input audit__input-file"
-											type="file"
-											name="leadsRobotsFiles"
-											id="leadsRobotsFiles"
-											multiple
-										/>
-										<span class="audit__text">Выберите файлы</span>
-									</label>
-								</div>
-							</div>
-							<div class="audit__row">
-								<div class="audit__cell audit__cell-title">Воронка сделок</div>
-								<div class="audit__cell audit__cell-field audit__cell-8">
-									<label class="audit__label audit__label-file" for="dealsHopper">
-										<input
-											class="audit__input audit__input-file"
-											type="file"
-											name="dealsHopper"
-											id="dealsHopper"
-											multiple
-										/>
-										<span class="audit__text">Выберите файлы</span>
-									</label>
-								</div>
-							</div>
-							<div class="audit__row audit__row-copying">
-								<div class="audit__cell audit__cell-title">Робот сделок</div>
-								<div class="audit__cell audit__cell-field audit__cell-12">
-									<textarea
-										class="audit__textarea audit__textarea-4"
-										name="dealsRobots-0"
-										id="dealsRobots-0"
-									></textarea>
-								</div>
-								<div class="audit__cell audit__cell-field audit__cell-field-file audit__cell-5">
-									<label class="audit__label audit__label-file" for="dealsRobotsFiles-0">
-										<input
-											class="audit__input audit__input-file"
-											type="file"
-											name="dealsRobotsFiles-0"
-											id="dealsRobotsFiles-0"
-											multiple
-										/>
-										<span class="audit__text">Выберите файлы</span>
-									</label>
-								</div>
-								<button class="btn-reset audit__button audit__button-new">Добавить</button>
-								<button class="btn-reset audit__button audit__button-delete">Удалить</button>
-							</div>
-							<div class="audit__row">
-								<div class="audit__cell audit__cell-title">Права доступа в CRM</div>
-								<div class="audit__cell audit__cell-field audit__cell-8">
-									<label class="audit__label audit__label-file" for="crmAccesses">
-										<input
-											class="audit__input audit__input-file"
-											type="file"
-											id="crmAccesses"
-											name="crmAccesses"
-											multiple
-										/>
-										<span class="audit__text">Выберите файлы</span>
-									</label>
-								</div>
-							</div>
-							<div class="audit__row">
-								<div class="audit__cell audit__cell-title">CRM-документы</div>
-								<div class="audit__cell audit__cell-field audit__cell-8">
-									<label class="audit__label audit__label-file" for="crmDocs">
-										<input
-											class="audit__input audit__input-file"
-											type="file"
-											name="crmDocs"
-											id="crmDocs"
-											multiple
-										/>
-										<span class="audit__text">Выберите файлы</span>
-									</label>
-								</div>
-							</div>
-							<div class="audit__row">
-								<div class="audit__cell audit__cell-title">Дополнительные поля сущностей</div>
-								<div class="audit__cell audit__cell-field audit__cell-8">
-									<label class="audit__label audit__label-file" for="entityExtraFields">
-										<input
-											class="audit__input audit__input-file"
-											type="file"
-											name="entityExtraFields"
-											id="entityExtraFields"
-											multiple
-										/>
-										<span class="audit__text">Выберите файлы</span>
-									</label>
-								</div>
-							</div>
-							<div class="audit__row">
-								<div class="audit__cell audit__cell-title">Источники</div>
-								<div class="audit__cell audit__cell-field audit__cell-8">
-									<label class="audit__label audit__label-file" for="sources">
-										<input
-											class="audit__input audit__input-file"
-											type="file"
-											name="sources"
-											id="sources"
-											multiple
-										/>
-										<span class="audit__text">Выберите файлы</span>
-									</label>
-								</div>
-							</div>
-							<div class="audit__row">
-								<div class="audit__cell audit__cell-title">Контакт-центр</div>
-								<div class="audit__cell audit__cell-field audit__cell-12">
-									<textarea
-										class="audit__textarea audit__textarea-4"
-										name="contactCenter"
-										id="contactCenter"
-									></textarea>
-								</div>
-								<div class="audit__cell audit__cell-field audit__cell-field-file audit__cell-5">
-									<label class="audit__label audit__label-file" for="contactCenterFiles">
-										<input
-											class="audit__input audit__input-file"
-											type="file"
-											name="contactCenterFiles"
-											id="contactCenterFiles"
-											multiple
-										/>
-										<span class="audit__text">Выберите файлы</span>
-									</label>
-								</div>
-							</div>
-							<div class="audit__row">
-								<div class="audit__cell audit__cell-title">Список открытых линий</div>
-								<div class="audit__cell audit__cell-field audit__cell-12">
-									<textarea
-										class="audit__textarea audit__textarea-4"
-										name="openLinesList"
-										id="openLinesList"
-									></textarea>
-								</div>
-							</div>
-							<div class="audit__row">
-								<div class="audit__cell audit__cell-title">Список CRM-форм</div>
-								<div class="audit__cell audit__cell-field audit__cell-8">
-									<label class="audit__label audit__label-file" for="crmForms">
-										<input
-											class="audit__input audit__input-file"
-											type="file"
-											name="crmForms"
-											id="crmForms"
-											multiple
-										/>
-										<span class="audit__text">Выберите файлы</span>
-									</label>
-								</div>
-							</div>
-							<div class="audit__row">
-								<div class="audit__cell audit__cell-title">База знаний</div>
-								<div class="audit__cell audit__cell-field audit__cell-8">
-									<label class="audit__label audit__label-file" for="knowledgeBase">
-										<input
-											class="audit__input audit__input-file"
-											type="file"
-											name="knowledgeBase"
-											id="knowledgeBase"
-											multiple
-										/>
-										<span class="audit__text">Выберите файлы</span>
-									</label>
-								</div>
-							</div>
-							<div class="audit__row">
-								<div class="audit__cell audit__cell-title">Диск, место</div>
-								<div class="audit__cell audit__cell-field audit__cell-8">
-									<label class="audit__label audit__label-file" for="diskSpace">
-										<input
-											class="audit__input audit__input-file"
-											type="file"
-											name="diskSpace"
-											id="diskSpace"
-											multiple
-										/>
-										<span class="audit__text">Выберите файлы</span>
-									</label>
-								</div>
-							</div>
-							<div class="audit__row">
-								<div class="audit__cell audit__cell-title">Рабочие группы</div>
-								<div class="audit__cell audit__cell-field audit__cell-8">
-									<label class="audit__label audit__label-file" for="workGroups">
-										<input
-											class="audit__input audit__input-file"
-											type="file"
-											name="workGroups"
-											id="workGroups"
-											multiple
-										/>
-										<span class="audit__text">Выберите файлы</span>
-									</label>
-								</div>
-							</div>
-							<div class="audit__row">
-								<div class="audit__cell audit__cell-title">Сайты и маркетинг</div>
-								<div class="audit__cell audit__cell-field audit__cell-8">
-									<label class="audit__label audit__label-file" for="sitesMarketing">
-										<input
-											class="audit__input audit__input-file"
-											type="file"
-											name="sitesMarketing"
-											id="sitesMarketing"
-											multiple
-										/>
-										<span class="audit__text">Выберите файлы</span>
-									</label>
-								</div>
-							</div>
-							<div class="audit__row">
-								<div class="audit__cell audit__cell-title"></div>
-								<button class="btn-reset audit__button audit__button-save">Отправить</button>
-							</div>
-						</form>
+							</section>
+						</div>
 					</div>
-				</section>
+				</div>
 			</main>
 		</div>
 	</body>
